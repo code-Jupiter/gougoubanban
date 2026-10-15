@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <activity
+            android:name=".debug.DebugActivity"
+            android:exported="false"
+            android:label="@string/debug_entry_label" />
+
+        <!-- Debug-only entry for acceptance automation: sends a user message
+             through the production FrontChatPipeline exactly like the chat UI.
+             Exists only in debug builds; release never sees this receiver. -->
+        <receiver
+            android:name=".debug.FirstRunProbeReceiver"
+            android:exported="true"
+            android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="com.littlekitty.xiaokele.debug.FIRST_RUN_PROBE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".debug.DebugChatSendReceiver"
+            android:exported="true"
+            android:permission="android.permission.DUMP" />
+
+        <!-- Debug-only memory probe: runs the production MemoryAnalysisProcessor
+             against the last persisted turn, so the memory path can be tested
+             without depending on a chat turn surviving the review stage. -->
+        <receiver
+            android:name=".debug.MemoryProbeReceiver"
+            android:exported="true"
+            android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="com.littlekitty.xiaokele.debug.SET_ROUTES" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Debug-only first-create validator probe: runs the real
+             FirstCreateServiceValidator against both providers and reports
+             non-sensitive outcomes to logcat and the probe screen. Keys are
+             read from intent extras or an app-private file and are deleted
+             after use; release never sees this receiver or activity. -->
+        <receiver
+            android:name=".debug.FirstCreateValidatorProbeReceiver"
+            android:exported="true"
+            android:permission="android.permission.DUMP" />
+
+        <activity
+            android:name=".debug.FirstCreateValidatorProbeActivity"
+            android:exported="true"
+            android:permission="android.permission.DUMP"
+            android:label="@string/debug_entry_label" />
+    </application>
+
+</manifest>

@@ -1,0 +1,36 @@
+.gradle/
+build/
+*/build/
+local.properties
+.idea/
+*.iml
+.DS_Store
+**/secrets.properties
+**/*.jks
+**/*.keystore
+
+.gradle-home/
+scripts/*.log
+
+# Local build/research outputs and signing material are not source artifacts.
+output/
+app/release/
+app/V0.3/
+genpkey/
+scripts/__pycache__/
+
+# Never publish local credentials, signing material, or diagnostics.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.apk
+*.aab
+*.log
+hs_err_pid*
+replay_pid*
+/Untitled
+/docs/simulations/
