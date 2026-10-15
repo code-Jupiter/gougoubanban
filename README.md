@@ -1,16 +1,16 @@
-# 狗狗伴伴 · gouguobanban
+# 狗狗伴伴 · gougoubanban
 
 一款 AI 小狗陪伴产品。给你的小狗起名字、设定相处方式，和它聊日常、看看它的日记，也让它用记忆延续你们的对话。
 
 **Android · 自带 Key（BYOK）· 本地优先 · MiniMax / 阿里百炼**
 
-[下载 Android APK](https://github.com/code-Jupiter/gouguobanban/raw/refs/heads/main/app-release.apk) · [页面展示](#页面展示) · [配置-api](#配置-api) · [自己运行项目](#自己运行项目)
+[下载 Android APK](https://github.com/code-Jupiter/gougoubanban/raw/refs/heads/main/app-release.apk) · [页面展示](#页面展示) · [配置-api](#配置-api) · [自己运行项目](#自己运行项目)
 
 > 安装包不附赠 API Key。体验聊天前，需要配置你自己的 AI 服务；调用可能产生费用，请在对应平台查看权限、余额及额度。
 
 ## 安卓手机直接体验
 
-1. 用 **Android 12 及以上**手机下载仓库根目录的 [app-release.apk](https://github.com/code-Jupiter/gouguobanban/raw/refs/heads/main/app-release.apk)。如果打开的是文件预览页，点击下载按钮。
+1. 用 **Android 12 及以上**手机下载仓库根目录的 [app-release.apk](https://github.com/code-Jupiter/gougoubanban/raw/refs/heads/main/app-release.apk)。如果打开的是文件预览页，点击下载按钮。
 2. 打开 APK，按系统提示为当前浏览器或文件管理器临时允许“安装未知应用”。安装后可关闭该权限；请保留系统安全检查。
 3. 首次启动按引导填写小狗名字、对你的称呼等信息，配置并验证至少一家 AI 服务，再确认人格设定。
 4. 后续可在 **设置 → AI 连接设置** 中管理 MiniMax、阿里百炼、Agent 路由与和风天气。
@@ -108,8 +108,8 @@
 1. 克隆仓库，或在 GitHub 选择 **Code → Download ZIP** 并解压：
 
    ```bash
-   git clone https://github.com/code-Jupiter/gouguobanban.git
-   cd gouguobanban
+   git clone https://github.com/code-Jupiter/gougoubanban.git
+   cd gougoubanban
    ```
 
 2. Android Studio 选择 **Open**，打开含 `settings.gradle.kts` 的项目根目录，等待 Gradle 同步。
