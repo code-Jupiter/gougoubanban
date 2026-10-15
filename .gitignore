@@ -28,6 +28,8 @@ scripts/__pycache__/
 *.p12
 *.pfx
 *.apk
+# Explicitly reviewed public installer; all other APKs remain ignored.
+!/app-release.apk
 *.aab
 *.log
 hs_err_pid*

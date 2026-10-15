@@ -76,7 +76,7 @@ python3 scripts/verify_public_providers.py
 
 - 聊天记录、记忆、画像与人格都存在本机 Room 数据库，不上传到任何你自己的服务器。
 - API Key 使用 Android Keystore 加密保存，不使用明文配置。
-- 设置导出默认不包含明文 Key。
+- 当前版本的设置导出包含明文 Key，请按密码文件保管，不要公开分享。
 - 详见 [PRIVACY.md](PRIVACY.md) 与 [SECURITY.md](SECURITY.md)。
 
 ## 第三方
